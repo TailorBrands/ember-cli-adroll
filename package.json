@@ -1,17 +1,26 @@
 {
   "name": "ember-cli-adroll",
-  "version": "0.0.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "version": "1.0.0",
+  "description": "ember-cli addon to add adroll pixel tracking",
   "keywords": [
-    "ember-addon"
+    "ember-addon",
+    "adroll",
+    "pixel",
+    "tracking"
   ],
   "license": "MIT",
-  "author": "",
+  "author": "Guy Maliar <guy@tailorbrands.com>",
   "directories": {
     "doc": "doc",
     "test": "tests"
   },
-  "repository": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TailorBrands/ember-cli-adroll.git"
+  },
+  "bugs": {
+    "url": "https://github.com/TailorBrands/ember-cli-adroll/issues"
+  },
   "scripts": {
     "build": "ember build",
     "start": "ember server",

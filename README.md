@@ -1,27 +1,55 @@
-# ember-cli-adroll
+# Ember-cli-adroll [![Ember Observer Score](https://emberobserver.com/badges/ember-cli-adroll.svg)](https://emberobserver.com/addons/ember-cli-adroll)
 
-This README outlines the details of collaborating on this Ember addon.
+This ember-cli addon injects adroll pixel into index.html.
 
 ## Installation
 
-* `git clone <repository-url>` this repository
-* `cd ember-cli-adroll`
-* `npm install`
-* `bower install`
+`ember install ember-cli-adroll`
 
-## Running
+## Configuration
 
-* `ember serve`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
+This plugin uses the ember-cli project's configuration as defined in `config/environment.js`.
 
-## Running Tests
+Add your adroll advertiser id and pixel id to `config/environment.js` and you're good to go.
+Optionally you can add your adroll email.
 
-* `npm test` (Runs `ember try:each` to test your addon against multiple Ember versions)
-* `ember test`
-* `ember test --server`
+```js
+// environment.js
 
-## Building
+    ENV.adroll = {
+        enabled: true,
+        adv_id: 'XXXXXXXXXXXXXXXXXXXXXX',
+        pix_id: 'XXXXXXXXXXXXXXXXXXXXXX',
+        email: 'me@example.com'
+    }
+```
 
-* `ember build`
+## Disabling per environment
 
-For more information on using ember-cli, visit [https://ember-cli.com/](https://ember-cli.com/).
+You can disable injecting adroll into different environments by setting the
+development param to true:
+
+```js
+// environment.js
+
+if (environment === 'test') {
+  ENV.adroll = {
+    enabled: false
+  }
+}
+```
+
+## Disclaimer
+
+This is completely unofficial and is not related to Adroll in any way.
+
+## Contributing
+
+1. Fork it
+2. Create your feature branch (`git checkout -b my-new-feature`)
+3. Commit your changes (`git commit -am 'Added some feature'`)
+4. Push to the branch (`git push origin my-new-feature`)
+5. Create new Pull Request
+
+## About Tailor Brands
+[Check us out!](https://www.tailorbrands.com)
